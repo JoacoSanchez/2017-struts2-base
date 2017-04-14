@@ -14,6 +14,15 @@ public class PersonaAction extends ActionSupport {
 	private String gender;
 	private List<Persona> personas;
 	
+//-------------------INICIALIZADOR---------------
+	
+	public String iniciar(){
+		personas = PersistentManager.getInstance(); 
+		return SUCCESS;
+	}
+
+//-------------------GETTERS Y SETTERS--------------------
+	
 	public String getName() {
 		return name;
 	}
@@ -38,6 +47,9 @@ public class PersonaAction extends ActionSupport {
 	public void setPersonas(List<Persona> personas) {
 		this.personas = personas;
 	}
+	
+//--------------------------------------------------
+	
 	public String save(){
 		personas = PersistentManager.getInstance(); 
 		int edad = 0;
@@ -50,10 +62,9 @@ public class PersonaAction extends ActionSupport {
 		}
 		p = new Persona(personas.size(), name, edad, gender);
 		personas.add(p);
-		return SUCCESS;
-	}
-	public String iniciar(){
-		personas = PersistentManager.getInstance(); 
+		setName("");
+		setAge("");
+		setGender("");
 		return SUCCESS;
 	}
 }

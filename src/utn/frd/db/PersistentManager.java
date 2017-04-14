@@ -10,10 +10,10 @@ public class PersistentManager {
 	public static List<Persona> getInstance(){
 		return data;
 	}
-	public static List<Persona> getData() {
+	/*public static List<Persona> getData() {
 		return data;
 	}
 	public static void setData(List<Persona> data) {
 		PersistentManager.data = data;
-	}
+	} */
 }

@@ -7,10 +7,10 @@ public class Persona {
 	private String gender;
 
 	public Persona(long id, String name, int age, String gender) {
-		//this.id = ident;
-		//this.name = nombre;
-		//this.age = edad; 
-		//this.gender = genero;
+		this.id = id;
+		this.name = name;
+		this.age = age; 
+		this.gender = gender;
 	}
 	public long getId() {
 		return id;
