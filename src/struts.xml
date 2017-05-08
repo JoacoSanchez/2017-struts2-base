@@ -26,6 +26,18 @@
 		<action name="personas" class="utn.frd.action.PersonaAction" method="iniciar">
 			<result name="success">/personas.jsp</result>
 		</action>
+		
+		<action name="Eliminar" class="utn.frd.action.PersonaAction" method="eliminar">
+			<result name="success">/personas.jsp</result>
+		</action>
+		
+		<action name="Modificar" class="utn.frd.action.PersonaAction" method="modificar">
+			<result name="success">/modificarPersonas.jsp</result>
+		</action>
+		
+		<action name="guardarModificacion" class="utn.frd.action.PersonaAction" method="guardarModificacion">
+			<result name="success">/personas.jsp</result>
+		</action>
 	</package>
 
 </struts>

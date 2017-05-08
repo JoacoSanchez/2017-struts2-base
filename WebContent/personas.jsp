@@ -14,7 +14,7 @@
 	<s:textfield label="Edad" name="age"></s:textfield>
 	<s:radio label="Genero" name="gender"
 		list="#{'Femenino':'Femenino','Masculino':'Masculino'}" />
-	<s:submit></s:submit>
+	<s:submit label="Cargar"></s:submit>
 	<s:actionerror/>
 </s:form>
 
@@ -25,12 +25,21 @@
 		<th>EDAD</th>
 		<th>GENERO</th>
 	</tr>
-<s:iterator value="personas" var="p">
+<s:iterator value="personas" var="p" status="status">
 	<tr>
+		<!-- 
+		<td><s:property value="#p.id"/>(<s:property value="%{#status.index}" />)</td>
+		-->
 		<td><s:property value="#p.id"/></td>
 		<td><s:property value="#p.name"/></td>
 		<td><s:property value="#p.age"/></td>
 		<td><s:property value="#p.gender"/></td>
+		<!-- 
+		<td><a href="modificar?id=<s:property value="#p.id"/>">Modificar</a></td>
+		<td><a href="eliminar?id=<s:property value="#p.id"/>">Eliminar</a></td>
+		-->
+		<td><s:a action="Eliminar" ><s:param name="id" value="#p.id"></s:param>Eliminar</s:a> 
+		<td><s:a action="Modificar"><s:param name="id" value="#p.id"></s:param>Modificar</s:a>
 	</tr>
 </s:iterator>
 </table>

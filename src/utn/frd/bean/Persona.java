@@ -12,6 +12,8 @@ public class Persona {
 		this.age = age; 
 		this.gender = gender;
 	}
+	
+//----------------------GETTERS Y SETTERS-----------------------
 	public long getId() {
 		return id;
 	}
